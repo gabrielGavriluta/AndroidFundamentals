@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="28sp"
+        android:textColor="#00FF00"
+        android:paddingLeft="8dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/emailAddressEditText"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:layout_marginLeft="8dp"/>
+
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone"
+        android:layout_marginLeft="8dp"/>
+
+    <CheckBox
+        android:id="@+id/termsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/termsAndConds"
+        android:paddingBottom="24dp"
+        android:layout_marginLeft="@dimen/small"/>
+
+    <Button
+        android:onClick="LoginOnClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:background="@color/blue"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/credentialsEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

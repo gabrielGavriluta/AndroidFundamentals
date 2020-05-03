@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">week3</string>
+    <string name="error_fill_email">Please fill the email address</string>
+    <string name="error_fill_phone">Please fill the phone number</string>
+    <string name="error_validate_email">Please fill the input with a valid email address</string>
+    <string name="termsAndConds"><![CDATA[I accept T&C]]></string>
+    <string name="submit">Submit</string>
+    <string name="login">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+</resources>
