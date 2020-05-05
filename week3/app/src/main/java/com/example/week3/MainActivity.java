@@ -11,40 +11,43 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-//    private EditText emailAddressEditText;
-//    private EditText phoneEditText;
-//    private TextView credentials;
-//    private CheckBox terms;
+    private EditText emailAddressEditText;
+    private EditText phoneEditText;
+    private TextView credentials;
+    private CheckBox terms;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.frame_layout);
-//        emailAddressEditText = findViewById(R.id.emailAddressEditText);
-//        phoneEditText = findViewById(R.id.phoneEditText);
-//        terms = findViewById(R.id.termsCheckBox);
-//        credentials = findViewById(R.id.credentialsEditText);
+        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_spinner);
+//        setContentView(R.layout.frame_layout);
+//        setContentView(R.layout.scroll_layout);
+        emailAddressEditText = findViewById(R.id.emailAddressEditText);
+        phoneEditText = findViewById(R.id.phoneEditText);
+        terms = findViewById(R.id.termsCheckBox);
+        credentials = findViewById(R.id.credentialsEditText);
     }
 
-//    public void LoginOnClick(View view) {
-//        String email = emailAddressEditText.getText().toString();
-//        String phone = phoneEditText.getText().toString();
-//        if (email.isEmpty()) {
-//            emailAddressEditText.setError(getString(R.string.error_fill_email));
-//        }
-//        else{
-//            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-//                emailAddressEditText.setError(getString(R.string.error_validate_email));
-//            }
-//        }
-//        if (phone.isEmpty()) {
-//            phoneEditText.setError(getString(R.string.error_fill_phone));
-//        }
-//        if (!terms.isChecked()) {
-//            Toast.makeText(this, "Please check the box", Toast.LENGTH_LONG).show();
-//        }
-//        if (!email.isEmpty() && !phone.isEmpty()) {
-//            credentials.append(email + "\n" + phone + "\n" + terms.isChecked() + "\n");
-//        }
-//    }
+    public void LoginOnClick(View view) {
+        String email = emailAddressEditText.getText().toString();
+        String phone = phoneEditText.getText().toString();
+        if (email.isEmpty()) {
+            emailAddressEditText.setError(getString(R.string.error_fill_email));
+        }
+        else{
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                emailAddressEditText.setError(getString(R.string.error_validate_email));
+            }
+        }
+        if (phone.isEmpty()) {
+            phoneEditText.setError(getString(R.string.error_fill_phone));
+        }
+        if (!terms.isChecked()) {
+            Toast.makeText(this, "Please check the box", Toast.LENGTH_LONG).show();
+        }
+        if (!email.isEmpty() && !phone.isEmpty()) {
+            credentials.append(email + "\n" + phone + "\n" + terms.isChecked() + "\n");
+        }
+    }
 }
